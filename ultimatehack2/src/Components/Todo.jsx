@@ -1,0 +1,17 @@
+import Form from "./Form";
+import { useState } from "react";
+import Todolist from "./Todolist";
+import Styles from "/src/Css modules/Todoitem.module.css";
+import Footer from "./Footer";
+
+export default function Todo() {
+  const [todos, setTodos] = useState([]);
+  const completedTodos = todos.filter((todo) => todo.done).length;
+  return (
+    <div>
+      <Form todos={todos} setTodos={setTodos}></Form>
+      <Todolist todos={todos} setTodos={setTodos}></Todolist>
+      <Footer completedTodos={completedTodos}></Footer>
+    </div>
+  );
+}
