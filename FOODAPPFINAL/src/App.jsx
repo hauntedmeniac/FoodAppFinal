@@ -8,7 +8,7 @@ import Innercontainer from "./Components/Innercontainer";
 import FoodDetail from "./Components/FoodDetail";
 function App() {
   const [fooddata, setfooddata] = useState([]);
-  const [foodId, setfoodid] = useState("");
+  const [foodId, setfoodid] = useState("53330");
   return (
     <div>
       <Nav />

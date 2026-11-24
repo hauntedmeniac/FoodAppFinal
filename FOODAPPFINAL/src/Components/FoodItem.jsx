@@ -1,5 +1,5 @@
 import styles from "./fooditem.module.css";
-export default function FoodItem({ food, setfoodid }) {
+export default function FoodItem({ food, setfoodid, }) {
   return (
     <div className={styles.itemcontainer}>
       <div className={styles.itemcontent}>
@@ -9,7 +9,7 @@ export default function FoodItem({ food, setfoodid }) {
       <div className={styles.buttoncontainer}>
         <button
           onClick={() => {
-            console.log(food.idMeal);
+            console.log(food);
             setfoodid(food.idMeal);
           }}
           className={styles.itembutton}
