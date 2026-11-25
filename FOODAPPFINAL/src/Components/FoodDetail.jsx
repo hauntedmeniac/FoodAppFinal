@@ -10,12 +10,14 @@ export default function FoodDetail({ foodId }) {
       const res = await fetch(`${URL}?i=${foodId}`); //?apiKey=${API_KEY}
       const data = await res.json();
       console.log(data);
-      setfood(data);
+      setfood(data.meals[0]);
     }
     fetchfood();
-  }, []);
-  return <div>food details {foodId} 
-  <h1> {food.strMeal}
-</h1>
-  </div>;
+  }, [foodId]);
+  return (
+    <div>
+      food details {foodId}
+      <h1> {food.strMeal}</h1>
+    </div>
+  );
 }
