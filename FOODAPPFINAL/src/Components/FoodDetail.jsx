@@ -16,8 +16,31 @@ export default function FoodDetail({ foodId }) {
   }, [foodId]);
   return (
     <div>
-      food details {foodId}
-      <h1> {food.strMeal}</h1>
+     <div><h1> {food.strMeal}</h1>
+      <img src={food.strMealThumb}/>
+      <div>
+  {/*  
+  making this as a comment because im not on sponacular
+  <span>
+    <strong> 🕐 {food.readyinminutes} minutes</strong>
+    </span>
+    <span>
+    <strong> Serves {food.servings}</strong>
+    </span>
+      <span>
+{food.vegeterian ? "vegetarian": "non-vegetarian"}
+      </span>
+      <span>
+      {food.vegan ? "vegan" : "non-vegan"}
+      </span>
+      */}
+      </div>
+    {/*  <div>
+       $ <span>
+          {food.priceperserving /100}
+        </span>
+        </div> */}
+      </div>
     </div>
   );
 }
